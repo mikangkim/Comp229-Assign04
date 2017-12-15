@@ -127,6 +127,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="image\main.gif" />
     <Content Include="Update.aspx" />
     <Content Include="Model.aspx" />
     <Content Include="Contact.aspx" />

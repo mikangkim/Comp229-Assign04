@@ -3,39 +3,32 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
-        <h1>ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+        <a href="Model.aspx">
+        <img src="image/main.gif"/></a>
+        <p>&nbsp;</p>
     </div>
 
     <div class="row">
         <div class="col-md-4">
-            <h2>Getting started</h2>
+            <h2>Wrath of Kings is</h2>
             <p>
-                ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-            A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
-            </p>
+                A miniatures war game, where players take command of the armies of one of the five kingdoms of Arikania! Scalable from 10 to 50 models per side, now you can vie for the throne of the Ancient King!</p>
             <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
+                <a class="btn btn-default" href="http://wrathofkings.com/ks/overview/">More Information &raquo;</a>
             </p>
         </div>
         <div class="col-md-4">
-            <h2>Get more libraries</h2>
+            <h2>Get Your Models</h2>
             <p>
-                NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
-            </p>
+                //////////</p>
             <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301949">Learn more &raquo;</a>
+                <a class="btn btn-default" href="Model.aspx">Check More &raquo;</a>
             </p>
         </div>
         <div class="col-md-4">
-            <h2>Web Hosting</h2>
-            <p>
-                You can easily find a web hosting company that offers the right mix of features and price for your applications.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
-            </p>
+            <h2>Media</h2>
+<iframe width="350" height="250" src="https://www.youtube.com/embed/cm_Xz1-hJ5k" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+
         </div>
     </div>
 

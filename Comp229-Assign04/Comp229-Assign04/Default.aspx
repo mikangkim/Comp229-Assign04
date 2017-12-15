@@ -20,7 +20,22 @@
         <div class="col-md-4">
             <h2>Get Your Models</h2>
             <p>
-                //////////</p>
+             <table>
+        <asp:Repeater ID="modellist" runat="server">
+            <ItemTemplate>
+                <tr>
+                    <td>
+                        <asp:HyperLink runat="server" NavigateUrl='<%# string.Format("~/Model.aspx?name={0}&faction={1}", Eval("name"), Eval("faction")) %>' >
+                            <asp:Label runat="server" Text='<%# Eval("name")%>'>  </asp:Label>
+                        </asp:HyperLink>
+                    </td>
+                    <td>
+
+                    </td>
+                </tr>
+            </ItemTemplate>
+        </asp:Repeater>
+</table></p>
             <p>
                 <a class="btn btn-default" href="Model.aspx">Check More &raquo;</a>
             </p>

@@ -11,6 +11,8 @@ namespace Comp229_Assign04
 {
     public class Global : HttpApplication
     {
+        public static object Models { get; internal set; }
+
         void Application_Start(object sender, EventArgs e)
         {
             // Code that runs on application startup

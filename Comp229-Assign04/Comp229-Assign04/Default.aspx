@@ -26,7 +26,7 @@
                 <tr>
                     <td>
                         <asp:HyperLink runat="server" NavigateUrl='<%# string.Format("~/Model.aspx?name={0}&faction={1}", Eval("name"), Eval("faction")) %>' >
-                            <asp:Label runat="server" Text='<%# Eval("name")%>'>  </asp:Label>
+                            <asp:Label runat="server" Text='<%# Eval("name")%>' ForeColor="Black">  </asp:Label>
                         </asp:HyperLink>
                     </td>
                     <td>

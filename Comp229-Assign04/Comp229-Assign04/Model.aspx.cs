@@ -1,5 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.IO;
+using Newtonsoft.Json;
 
 
 namespace Comp229_Assign04
@@ -14,7 +21,7 @@ namespace Comp229_Assign04
             var vName = Request.QueryString["name"];
             var vFaction = Request.QueryString["faction"];
 
-            if (name != null && faction != null)
+            if (modelName != null && modelFaction != null)
             {
                 statsLists = Global.models.FirstOrDefault(tModel => tModel.name == vName && tModel.faction == vFaction);
                 pickedModels();
@@ -27,33 +34,59 @@ namespace Comp229_Assign04
         private void pickedModels()
         {
 
-            modelimg.ImageUrl = statsLists.imageUrl;
-            name.Text = statsLists.name;
-            faction.Text = statsLists.faction;
-            rank.Text = statsLists.rank.ToString();
-            _base.Text = statsLists._base.ToString();
-            size.Text = statsLists.size.ToString();
-            deployment.Text = statsLists.deploymentZone;
+            modelImg.ImageUrl = statsLists.imageUrl;
+            modelName.Text = statsLists.name;
+            modelFaction.Text = statsLists.faction;
+            modelRank.Text = statsLists.rank.ToString();
+            modelBase.Text = statsLists._base.ToString();
+            modelSize.Text = statsLists.size.ToString();
+            modelDeploymentZone.Text = statsLists.deploymentZone;
+
             traitsrep.DataSource = statsLists.traits;
             traitsrep.DataBind();
+
             typerep.DataSource = statsLists.defenseChart;
             typerep.DataBind();
-            mobility.Text = statsLists.mobility.ToString();
-            willpower.Text = statsLists.willpower.ToString();
-            resiliance.Text = statsLists.resiliance.ToString();
-            wounds.Text = statsLists.wounds.ToString();
+
+            modelMobility.Text = statsLists.mobility.ToString();
+            modelWillpower.Text = statsLists.willpower.ToString();
+            modelResiliance.Text = statsLists.resiliance.ToString();
+            modelWounds.Text = statsLists.wounds.ToString();
 
 
         }
 
         protected void Update_Click(object sender, EventArgs e)
         {
-            string url = string.Format("~/Update.aspx?name={0}&faction={1}", vName, vFaction);
-            Response.Redirect(url);
+            Save.Visible = true;
+            Update.Visible = false;
+
+            modelName.Enabled = true;
+            modelFaction.Enabled = true;
+            modelRank.Enabled = true;
+        }
+        private void updateModels()
+        {
+            statsLists.name = modelName.Text;
+            statsLists.faction = modelFaction.Text;
+            statsLists.rank = int.Parse(modelRank.Text);
+        }
+        protected void Save_Click(object sender, EventArgs e)
+        {
+            Save.Visible = false;
+            Update.Visible = true;
+
+            modelName.Enabled = false;
+            modelFaction.Enabled = false;
+            modelRank.Enabled = false;
+
+            updateModels();
+
+            Global.UpdateAssign04JsonFile();
         }
         protected void Delete_Click(object sender, EventArgs e)
         {
-            //remove based on vname and vfaction          
+        
             Global.models.RemoveAll(tModel => tModel.name == vName && tModel.faction == vFaction);
             Response.Redirect("~/Default.aspx");
         }

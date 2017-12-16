@@ -13,58 +13,58 @@ namespace Comp229_Assign04 {
     public partial class Update {
         
         /// <summary>
-        /// name control.
+        /// modelName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox name;
+        protected global::System.Web.UI.WebControls.TextBox modelName;
         
         /// <summary>
-        /// faction control.
+        /// modelFaction control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox faction;
+        protected global::System.Web.UI.WebControls.TextBox modelFaction;
         
         /// <summary>
-        /// rank control.
+        /// modelRank control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox rank;
+        protected global::System.Web.UI.WebControls.TextBox modelRank;
         
         /// <summary>
-        /// _base control.
+        /// modelBase control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox _base;
+        protected global::System.Web.UI.WebControls.TextBox modelBase;
         
         /// <summary>
-        /// size control.
+        /// modelSize control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox size;
+        protected global::System.Web.UI.WebControls.TextBox modelSize;
         
         /// <summary>
-        /// deployment control.
+        /// modelDeploymentZone control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox deployment;
+        protected global::System.Web.UI.WebControls.TextBox modelDeploymentZone;
         
         /// <summary>
         /// traitsrep control.
@@ -85,39 +85,48 @@ namespace Comp229_Assign04 {
         protected global::System.Web.UI.WebControls.Repeater typerep;
         
         /// <summary>
-        /// mobility control.
+        /// modelMobility control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox mobility;
+        protected global::System.Web.UI.WebControls.TextBox modelMobility;
         
         /// <summary>
-        /// willpower control.
+        /// modelWillpower control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox willpower;
+        protected global::System.Web.UI.WebControls.TextBox modelWillpower;
         
         /// <summary>
-        /// resiliance control.
+        /// modelResiliance control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox resiliance;
+        protected global::System.Web.UI.WebControls.TextBox modelResiliance;
         
         /// <summary>
-        /// wounds control.
+        /// modelWounds control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox wounds;
+        protected global::System.Web.UI.WebControls.TextBox modelWounds;
+        
+        /// <summary>
+        /// updatechanges control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button updatechanges;
     }
 }

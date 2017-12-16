@@ -7,52 +7,63 @@
         <h4>Update Model.</h4>
          <div class="col-xs-12 col-md-4">
         <table>
-            <tr><td>Name of the Model:</td><td>
-                    <asp:TextBox runat="server" ID="name"></asp:TextBox>
-                </td></tr>
-            <tr><td>Faction:</td><td>
-                    <asp:TextBox runat="server" ID="faction"></asp:TextBox>
-                </td> </tr>
-            <tr><td>Rank:</td><td>
-                    <asp:TextBox runat="server" ID="rank"></asp:TextBox>
-                </td> </tr>
-            <tr><td>Base:</td> <td>
-                    <asp:TextBox runat="server" ID="_base"></asp:TextBox>
-                </td> </tr>
-            <tr><td>Size:</td><td>
-                    <asp:TextBox runat="server" ID="size"></asp:TextBox>
-                </td></tr>
-            <tr><td>Deployment Zone:</td><td>
-                    <asp:TextBox runat="server" ID="deployment"></asp:TextBox>
-                </td></tr>
-            <tr><td>Traits:</td><td>
-                    <asp:Repeater runat="server" ID="traitsrep">
-                        <ItemTemplate>
-                            <asp:TextBox runat="server" Text="<%# Container.DataItem.ToString() %>"></asp:TextBox>
-                            <br />
-                        </ItemTemplate>
-                    </asp:Repeater> </td></tr>
-            <tr><td>Types:</td><td>
-                    <asp:Repeater runat="server" ID="typerep">
-                        <ItemTemplate>
-                            <asp:TextBox runat="server" Text="<%# Container.DataItem.ToString() %>"></asp:TextBox>
-                            <br />
-                        </ItemTemplate>
-                    </asp:Repeater></td> </tr>
-            <tr><td>Mobility:</td><td>
-                    <asp:TextBox runat="server" ID="mobility"></asp:TextBox>
-                </td></tr>
-            <tr><td>Will Power:</td> <td>
-                    <asp:TextBox runat="server" ID="willpower"></asp:TextBox>
-                </td> </tr>
-            <tr><td>Resiliance:</td><td>
-                    <asp:TextBox runat="server" ID="resiliance"></asp:TextBox>
-                </td></tr>
-            <tr><td>Wounds:</td><td>
-                    <asp:TextBox runat="server" ID="wounds"></asp:TextBox>
-                </td></tr>
+
+        <tr><td>Name:</td><td>
+        <asp:TextBox ID="modelName" runat="server" CssClass="table" Width="150px" Enabled="false"/></td></tr>
+
+        <tr><td>Faction:</td><td>
+        <asp:TextBox ID="modelFaction" runat="server" CssClass="table" Width="150px" Enabled="false"/></td></tr>
+
+        <tr><td>Rank:</td><td>
+        <asp:TextBox ID="modelRank" runat="server" CssClass="table" Width="150px" Enabled="false" /></td></tr>
+
+        <tr><td>Base:</td><td>
+        <asp:TextBox ID="modelBase" runat="server" CssClass="table" Width="150px" Enabled="false"/></td></tr>
+
+        <tr><td>Size:</td><td>
+        <asp:TextBox ID="modelSize" runat="server" CssClass="table" Width="150px" Enabled="false"/></td></tr>
+
+        <tr><td>Deployment Zone:</td><td>
+        <asp:TextBox ID="modelDeploymentZone" runat="server" CssClass="table" Width="150px" Enabled="false"/></td></tr>
+
+        <tr><td>Traits:</td><td>
+        <asp:Repeater runat="server" ID="traitsrep">
+            <ItemTemplate>
+                <asp:Label runat="server" Text="<%# Container.DataItem.ToString() %>"></asp:Label>
+            <br />
+            </ItemTemplate>
+        </asp:Repeater></td></tr>
+
+        <tr><td>Types:</td><td>
+        <asp:Repeater runat="server" ID="typerep">
+            <ItemTemplate>
+                <asp:Label runat="server" Text="<%# Container.DataItem.ToString() %>"></asp:Label>
+            <br />
+            </ItemTemplate>
+        </asp:Repeater></td></tr>
+
+        <tr><td>Mobility:</td><td>
+        <asp:TextBox ID="modelMobility" runat="server" CssClass="table" Width="150px" Enabled="false"/></td></tr>
+
+        <tr><td>Will Power:</td><td>
+        <asp:TextBox ID="modelWillpower" runat="server" CssClass="table" Width="150px" Enabled="false"/></td></tr>
+
+        <tr><td>Resiliance:</td><td>
+        <asp:TextBox ID="modelResiliance" runat="server" CssClass="table" Width="150px" Enabled="false"/></td></tr>
+
+        <tr><td>Wounds:</td><td>
+        <asp:TextBox ID="modelWounds" runat="server" CssClass="table" Width="150px" Enabled="false"/></td></tr>
         </table>
 
+             <div style="clear:both"></div>
+        <div>
+             <table>
+      
+       
+
+</table>
+            <asp:Button ID="updatechanges" runat="server" Text="Update Changes" OnClick="updatechanges_Click" />
+        </div>
     </div>
         </div>
 

@@ -5,7 +5,9 @@
     <div>
   
         <table>
-        <tr><asp:Image runat="server" ID="modelImg" CssClass="img-thumbnail" Width="250px" /></tr>  
+            
+        <tr><th><asp:Image runat="server" ID="modelImg" CssClass="img-thumbnail" Width="250px" /></th></tr>
+            
         
         <tr><td>Name:</td><td>
         <asp:TextBox ID="modelName" runat="server" CssClass="table" Width="150px" Enabled="false"/></td></tr>

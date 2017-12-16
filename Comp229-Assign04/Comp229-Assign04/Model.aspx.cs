@@ -14,6 +14,7 @@ namespace Comp229_Assign04
     public partial class Model : System.Web.UI.Page
     {
         private models.StatsLists statsLists;
+
         protected string vName;
         protected string vFaction;
         protected void Page_Load(object sender, EventArgs e)
@@ -86,7 +87,7 @@ namespace Comp229_Assign04
         }
         protected void Delete_Click(object sender, EventArgs e)
         {
-        
+
             Global.models.RemoveAll(tModel => tModel.name == vName && tModel.faction == vFaction);
             Response.Redirect("~/Default.aspx");
         }

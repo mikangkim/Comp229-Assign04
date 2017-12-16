@@ -26,14 +26,14 @@ namespace Comp229_Assign04
             if (name != null && faction != null)
             {
                 statsLists = Global.models.FirstOrDefault(tModel => tModel.name == vName && tModel.faction == vFaction);
-                selectedmodel();
+                pickedModels();
             }
             else
             {
                 Response.Redirect("Default.aspx");
             }
         }
-        private void selectedmodel()
+        private void pickedModels()
         {
 
             name.Text = statsLists.name;

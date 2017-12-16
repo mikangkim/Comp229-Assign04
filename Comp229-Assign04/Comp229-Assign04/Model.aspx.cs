@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 
 namespace Comp229_Assign04
@@ -21,14 +17,14 @@ namespace Comp229_Assign04
             if (name != null && faction != null)
             {
                 statsLists = Global.models.FirstOrDefault(tModel => tModel.name == vName && tModel.faction == vFaction);
-                selectedmodel();
+                pickedModels();
             }
             else
             {
                 Response.Redirect("Default.aspx");
             }
         }
-        private void selectedmodel()
+        private void pickedModels()
         {
 
             modelimg.ImageUrl = statsLists.imageUrl;

@@ -3,10 +3,11 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div>
-        <asp:Image runat="server" ID="modelimg" Width="300px"/>
-
-    
+   
         <table>
+            <tr>
+                    <asp:Image runat="server" ID="modelimg" CssClass="img-thumbnail" Width="300px" />
+            </tr> 
             <tr><td>Name:</td><td>
                     <asp:Label runat="server" ID="name"></asp:Label>
                 </td></tr>
@@ -54,5 +55,12 @@
         </table>
 
     </div>
+
+    <div style="clear:both"></div>
+        <div>
+            <asp:Button ID="Update" runat="server" OnClick="Update_Click" Text="Update" Width="150px" />
+            <br />
+            <asp:Button ID="Delete" runat="server" OnClick="Delete_Click" Text="Delete" Width="150px" />
+        </div>
 
 </asp:Content>

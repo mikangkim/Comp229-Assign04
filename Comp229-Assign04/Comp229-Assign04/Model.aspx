@@ -62,6 +62,7 @@
 
     <div>
         <asp:Button ID="Update" runat="server" OnClick="Update_Click" Text="Update" Width="150px" CssClass="btn brn-md btn-primary" />
+        <asp:Label ID="updateLabel" runat="server"></asp:Label>
         <br />
         <asp:Button ID="Save" runat="server" OnClick="Save_Click" Text="Save" CssClass="btn brn-md btn-success" Visible="false" />                 ValidationGroup="Update"/>
         <br />

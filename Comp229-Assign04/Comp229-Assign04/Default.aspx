@@ -37,7 +37,7 @@
         </asp:Repeater>
 </table>
             <p>
-                <a class="btn btn-default" href="Model.aspx">Check More &raquo;</a>
+                <a class="btn btn-default" href="Default.aspx">ADD &raquo;</a>
             </p>
         </div>
         <div class="col-md-4">

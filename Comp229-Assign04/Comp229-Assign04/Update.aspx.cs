@@ -7,6 +7,8 @@ using System.Web;
 using System.Web.Hosting;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Net.Mail;
+
 
 
 namespace Comp229_Assign04
@@ -54,7 +56,7 @@ namespace Comp229_Assign04
 
         }
 
-        protected void updatechanges_Click(object sender, EventArgs e)
+        protected void update_Click(object sender, EventArgs e)
         {
 
             statsLists.name = Convert.ToString(modelName.Text);
@@ -74,11 +76,39 @@ namespace Comp229_Assign04
             {
 
                 writer.WriteLine(JsonConvert.SerializeObject(statsLists));
+                sendemail();
             }
 
             Response.Redirect("~/Default.aspx");
         }
 
+        protected void sendemail()
+        {
+            SmtpClient client = new SmtpClient();
+            MailMessage message = new MailMessage();
+            try
+            {
+                MailAddress from = new MailAddress("cc-comp229f2016@outlook.com", "from me");
+                MailAddress to = new MailAddress("to@outlook.com", "to you");
+                message.From = from; message.To.Add(to);
+                message.Subject = "hello!";
+                //just sending the basic json due to time constraints
+                System.Net.Mail.Attachment attachment;
+                attachment = new System.Net.Mail.Attachment("~/updatedAssign04.json");
+                message.Attachments.Add(attachment);
+                client.Host = "mailserver.example.com";
+                client.Credentials = new System.Net.NetworkCredential("username", "password");
+                client.Send(message);
+
+
+                updateLabel.Text = "message sent";
+
+            }
+            catch (Exception e)
+            {
+                updateLabel.Text = "message not sent";
+            }
+        }
 
     }
 }

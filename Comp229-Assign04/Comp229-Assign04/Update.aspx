@@ -55,16 +55,16 @@
         <asp:TextBox ID="modelWounds" runat="server" CssClass="table" Width="150px" Enabled="false"/></td></tr>
         </table>
 
-             <div style="clear:both"></div>
+        <div style="clear:both"></div>
+        
         <div>
-             <table>
-      
-       
+        <table>
+            <asp:Button ID="update" runat="server" Text="Update Changes" OnClick="update_Click" />
+            <asp:Label ID="updateLabel" runat="server"></asp:Label>
+        </table>
+        </div>
 
-</table>
-            <asp:Button ID="updatechanges" runat="server" Text="Update Changes" OnClick="updatechanges_Click" />
         </div>
     </div>
-        </div>
 
 </asp:Content>

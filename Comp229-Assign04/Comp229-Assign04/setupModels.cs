@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Security.Claims;
+using System.Threading.Tasks;
+
 
 namespace Comp229_Assign04
 {
     public class models
     {
-        public class Models
+        public class StatsLists
         {
             public string name { get; set; }
             public string faction { get; set; }
@@ -22,10 +25,29 @@ namespace Comp229_Assign04
             public int willpower { get; set; }
             public int resiliance { get; set; }
             public int wounds { get; set; }
+            public Action[] actions { get; set; }
+            public Specialability[] specialAbilities { get; set; }
             public string imageUrl { get; set; }
 
-
+            internal void RemoveAll(Func<object, bool> p)
+            {
+                throw new NotImplementedException();
+            }
         }
 
+        public class Action
+        {
+            public string name { get; set; }
+            public string type { get; set; }
+            public int rating { get; set; }
+            public string range { get; set; }
+            public string description { get; set; }
+        }
+
+        public class Specialability
+        {
+            public string name { get; set; }
+            public string description { get; set; }
+        }
     }
 }

@@ -4,15 +4,15 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Newtonsoft.Json;
-using System.IO;
+
 
 namespace Comp229_Assign04
 {
     public partial class Model : System.Web.UI.Page
     {
-        private models.Models modelsState;
-
+        private models.StatsLists statsLists;
+        protected string vName;
+        protected string vFaction;
         protected void Page_Load(object sender, EventArgs e)
         {
             var vName = Request.QueryString["name"];
@@ -20,33 +20,46 @@ namespace Comp229_Assign04
 
             if (name != null && faction != null)
             {
-                modelsState = Global.models.FirstOrDefault(tModel => tModel.name == vName && tModel.faction == vFaction);
-                pickModel();
+                statsLists = Global.models.FirstOrDefault(tModel => tModel.name == vName && tModel.faction == vFaction);
+                selectedmodel();
             }
             else
             {
                 Response.Redirect("Default.aspx");
             }
         }
-        private void pickModel()
+        private void selectedmodel()
         {
-            modelimg.ImageUrl = modelsState.imageUrl;
-            name.Text = modelsState.name;
-            faction.Text = modelsState.faction;
-            rank.Text = modelsState.rank.ToString();
-            _base.Text = modelsState._base.ToString();
-            size.Text = modelsState.size.ToString();
-            deployment.Text = modelsState.deploymentZone;
-            traitsrep.DataSource = modelsState.traits;
+
+            modelimg.ImageUrl = statsLists.imageUrl;
+            name.Text = statsLists.name;
+            faction.Text = statsLists.faction;
+            rank.Text = statsLists.rank.ToString();
+            _base.Text = statsLists._base.ToString();
+            size.Text = statsLists.size.ToString();
+            deployment.Text = statsLists.deploymentZone;
+            traitsrep.DataSource = statsLists.traits;
             traitsrep.DataBind();
-            typerep.DataSource = modelsState.defenseChart;
+            typerep.DataSource = statsLists.defenseChart;
             typerep.DataBind();
-            mobility.Text = modelsState.mobility.ToString();
-            willpower.Text = modelsState.willpower.ToString();
-            resiliance.Text = modelsState.resiliance.ToString();
-            wounds.Text = modelsState.wounds.ToString();
+            mobility.Text = statsLists.mobility.ToString();
+            willpower.Text = statsLists.willpower.ToString();
+            resiliance.Text = statsLists.resiliance.ToString();
+            wounds.Text = statsLists.wounds.ToString();
 
 
+        }
+
+        protected void Update_Click(object sender, EventArgs e)
+        {
+            string url = string.Format("~/Update.aspx?name={0}&faction={1}", vName, vFaction);
+            Response.Redirect(url);
+        }
+        protected void Delete_Click(object sender, EventArgs e)
+        {
+            //remove based on vname and vfaction          
+            Global.models.RemoveAll(tModel => tModel.name == vName && tModel.faction == vFaction);
+            Response.Redirect("~/Default.aspx");
         }
     }
 }

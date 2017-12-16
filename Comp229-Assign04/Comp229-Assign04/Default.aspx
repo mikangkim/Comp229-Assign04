@@ -19,9 +19,9 @@
         </div>
         <div class="col-md-4">
             <h2>Get Your Models</h2>
-            <p>
+ 
              <table>
-        <asp:Repeater ID="modellist" runat="server">
+        <asp:Repeater ID="library" runat="server">
             <ItemTemplate>
                 <tr>
                     <td>
@@ -35,14 +35,14 @@
                 </tr>
             </ItemTemplate>
         </asp:Repeater>
-</table></p>
+</table>
             <p>
                 <a class="btn btn-default" href="Model.aspx">Check More &raquo;</a>
             </p>
         </div>
         <div class="col-md-4">
             <h2>Media</h2>
-<iframe width="350" height="250" src="https://www.youtube.com/embed/cm_Xz1-hJ5k" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+<iframe width="350" height="250" src="https://www.youtube.com/embed/cm_Xz1-hJ5k"></iframe>
 
         </div>
     </div>

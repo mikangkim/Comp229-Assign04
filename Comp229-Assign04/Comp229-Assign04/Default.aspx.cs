@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Newtonsoft.Json;
-using System.IO;
-using System.Net.Mail;
 
 namespace Comp229_Assign04
 {
@@ -14,7 +12,9 @@ namespace Comp229_Assign04
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            library.DataSource = Global.models;
+            library.DataBind();
         }
+
     }
 }
